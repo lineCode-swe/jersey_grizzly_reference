@@ -37,12 +37,14 @@ public class MyResourceTest {
         server.stop();
     }
 
-    /**
-     * Test to see that the message "Got it!" is sent in the response.
-     */
-//    @Test
-//    public void testGetIt() {
-//        String responseMsg = target.path("myresource").request().get(String.class);
-//        assertEquals("Got it!", responseMsg);
-//    }
+    // Standard di nomenclatura dei test di Roy Osherove
+    // Fonte: https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html
+
+    @Test
+    public void getProductInJSON_HttpGetWorksWithGrizzlyServerOn_returnsKnownJSONFile() {
+        String responseMsg = target.path("myresource").request().get(String.class);
+        assertEquals("{\"name\":\"iPad 3\",\"qty\":999}", responseMsg);
+    }
+
+    // TODO Aggiungere test per Http POST
 }

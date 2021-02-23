@@ -29,7 +29,7 @@ public class MyResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response createProductInJSON(Product product) {
 
-        String result = "Product created : " + product;
+        String result = "Product created: " + product;
 
         return Response.status(201).entity(result).build();
     }
