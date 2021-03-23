@@ -38,6 +38,11 @@
       <artifactId>jersey-media-json-jackson</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.atmosphere</groupId>
+      <artifactId>atmosphere-jersey</artifactId>
+      <version>${atmosphere.version}</version>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
@@ -180,6 +185,7 @@
   <properties>
     <jersey.version>3.0.1</jersey.version>
     <checkstyle.version>3.1.0</checkstyle.version>
+    <atmosphere.version>2.6.4</atmosphere.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.projectKey>lineCode-swe_jersey_grizzly_reference</sonar.projectKey>
     <sonar.organization>linecode-swe</sonar.organization>
